@@ -6,24 +6,91 @@
     <title>Week 4 - Home</title>
   </head>
   <body>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="#Cats">Cats</a>
+    </nav>
     <!-- Document Content -->
     <header>
         <h1>HTML Week 4 - Images, Links, Forms, and Tables</h1>
-        <nav>
-          <a href="about.html">About</a>
-        </nav>
     </header>
     <main>
       <!-- the src, or source, is an attribute that tells the image tag which image it should display -->
-      <img src="images/kitten.jpg" alt="Kitten sleeping on a blanket" width="300" title="Cute Kitten" />
+      <img src="images/kitten.jpg" alt="kitten sleeping on a red blanket" width="300" title="Cute Kitten">
 
-      <article>
-        <!-- the a tag, or anchor tag, creates a link to take a user somewhere else -->
-        <!-- the href tag tells the browser where the link should go -->
-        <!-- the text in between the opening and closing a tags is what the user clicks on -->
-        <!-- _blank in the target attribute opens the link in a new tab -->
-        <a href="https://google.ca" target="_blank">Google</a>
+      <article id="cats">
+        <!-- the a tag or anchor tag, creates a link to take a user somewhere else-->
+        <!-- the href tag tells the browser where the link should go-->
+        <!-- the text in between the opening and closing a tags is what the user clicks on-->
+        <a href="http://google.ca" target="_blank">Google</a>
       </article>
+
+      <article id="cats">
+        <p>Things my cat does to keep me up at night</p>
+        <ul>
+          <li>Scratches at the door</li>
+          <li>Attacks my feet</li>
+          <li>Chases the other cats</li>
+        </ul>
+      </article>
+
+      <!-- the form tag defines the area of the form - when you submit, you submit all information inside that form -->
+      <form action="index.html" method="get">
+        <!-- the label and the input are linked - the for attribute in the label tag must match the id of the input tag -->
+        <!-- all form fields must have a type of attribute (that defines what they are) and a name attribute (that allows ) -->
+        <p>
+          <label for="username">Name: </label>
+          <input id="username">
+        </p>
+        <p>
+        <!-- the password input field hides the characters for the user -->
+          <label for="password">Password: </label>
+          <input id="password">
+        </p>
+        <p>
+        <!-- some inputs are more than just text, like a colour picker -->
+          <label for ="col">Pick a Colour: </label>
+          <input id="col" type="color">
+        </p>
+        <p>
+        <!-- the value attribute sets a default starting value for the form field-->
+          <label for="num">Pick a number: </label>
+          <input id="num" type="range" name="num" value="4">
+        </p>
+        <p>
+        <!-- text area is for multiple lines of text -->
+          <label for="info">Enter the info: </label>
+          <textarea id="info" name="info"></textarea>
+        </p>
+        <p>
+        <!-- the select tag is the dropdown menu, and the option tags are each item in the dropdown -->
+          <label for="fruit">Pick a fruit: </label>
+          <select id="fruit" name="fruit">
+            <!-- option tags must have a value, which is what gets sent with the form -->
+            <option value="default">banana</option>
+            <option value="apple">apple</option>
+            <option value="mango">mango</option>
+            <option value="grapefruits">grapefruits</option>
+          </select>
+        </p>
+        <p>
+        <!-- the "checked" attribute on a checkbox makes it start off checked-->
+          <label for="spam"> Spam me: </label>
+          <input type="checkbox" id="spam" name="spam" checked>
+        </p>
+        <p>
+        <!-- radio buttons need to have a matching name attribute to make them a set -->
+          <span>Do you like dogs: </span>
+          <label for="yes">Yes</label>
+          <input type="radio" id="yes" name="dogs" value="yes">
+          <label for="no">No</label>
+          <input type="radio" id="no" name="dogs" value="no">
+        </p>
+        <p>
+        <!-- the submit button submits the form! -->
+          <button type="submit" name="submit!">Submit!</button>
+        </p>
+      </form>
     </main>
     <footer>
         <article>&copy; Somebody, Somewhere, 2021</article>
